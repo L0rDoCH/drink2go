@@ -1,0 +1,141 @@
+.menu {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+}
+
+.menu__main-menu-wrapper {
+  grid-area: 2/1/3/3;
+
+  &--close {
+    display: none;
+  }
+}
+
+.menu__login-menu-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu__main-menu-list,
+.menu__login-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__main-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.menu__login-menu-list {
+  display: flex;
+}
+
+.menu__main-menu-item {
+  text-align: center;
+  box-sizing: border-box;
+  border-top: 1px @base-secondary solid;
+  padding: 20px;
+
+  &:last-child {
+    border-bottom: 1px @base-secondary solid;
+  }
+}
+
+.menu__login-menu-item {
+  padding: 20px;
+  text-align: center;
+}
+
+.menu__main-menu-link,
+.menu__login-menu-link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @base-black;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.menu__login-menu-link {
+  display: block;
+  line-height: 0;
+}
+
+.menu__login-menu-text {
+  display: none;
+  margin: 0;
+}
+
+.menu__toggle {
+  display: none;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--JS-menu {
+    display: block;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.menu__toggle-burger {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  left: 20px;
+  width: 20px;
+  height: 2px;
+  background-color: @base-black;
+  transition-duration: 0.25s;
+  transition-delay: 0.25s;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: 0;
+    background-color: @base-black;
+    transition: transform 0.25s, top 0.25s 0.25s;
+    transition-duration: 0.25s;
+  }
+
+  &::after {
+    top: -6px;
+  }
+
+  &::before {
+    top: 6px;
+  }
+
+  &--close {
+    transition-duration: 0.1s;
+    transition-delay: 0.25s;
+    background: transparent;
+
+    &::after {
+      transition: top 0.4s, transform 0.25s 0.25s;
+      top: 0;
+      transform: rotateZ(45deg);
+    }
+
+    &::before {
+      transition: top 0.25s, transform 0.25s 0.25s;
+      top: 0;
+      transform: rotateZ(-45deg);
+    }
+  }
+}

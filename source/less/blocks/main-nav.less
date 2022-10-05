@@ -1,0 +1,25 @@
+.main-nav {
+  margin: 0 auto;
+  width: 320px;
+  box-sizing: border-box;
+}
+
+.main-nav__logo {
+  display: flex;
+  font-size: 12px;
+  line-height: 16px;
+  color: @base-black;
+  text-decoration: none;
+}
+
+.main-nav__logo-image {
+  margin: 12px 20px;
+}
+
+.main-nav__logo-text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
