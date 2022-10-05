@@ -101,9 +101,9 @@
         <button class="slider__pagination-button" type="button"><span class="visually-hidden">3</span></button>
       </li>
     </ul>
-    <button class="slider__toggle slider__toggle--left" type="button"><span class="visually-hidden">Назад</span>
+    <button class="slider__toggle slider__toggle--back" type="button"><span class="visually-hidden">Назад</span>
     </button>
-    <button class="slider__toggle slider__toggle--right" type="button"><span class="visually-hidden">Вперед</span>
+    <button class="slider__toggle slider__toggle--forward" type="button"><span class="visually-hidden">Вперед</span>
     </button>
   </section>
 
@@ -140,10 +140,10 @@
           <div class="filter__range range">
             <div class="range__scale">
               <div class="range__bar" style="left: 0px; width: 20px"> <!--Стиль для изменения длины слайдера-->
-                <button class="range__toggle range__toggle--min">
+                <button class="range__toggle range__toggle--min" type="button">
                   <span class="visually-hidden">Изменить минимальную цену</span>
                 </button>
-                <button class="range__toggle range__toggle--max">
+                <button class="range__toggle range__toggle--max" type="button">
                   <span class="visually-hidden">Изменить максимальную цену</span>
                 </button>
               </div>
@@ -240,6 +240,94 @@
         </div>
       </form>
     </div>
+
+    <div class="catalog__sorting-wrapper sorting">
+      <p class="sorting__text">сортировка:</p>
+      <select class="sorting__control" name="catalog-sorting">
+        <option value="default">по умолчанию</option>
+        <option value="expensive">сначала дорогие</option>
+        <option value="cheap">сначала дешёвые</option>
+        <option value="high-rating">высокий рейтинг</option>
+      </select>
+    </div>
+
+    <div class="catalog__products-wrapper products">
+      <ul class="products__list">
+        <li class="products__item card">
+          <a class="card__link" href="#">
+            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <b class="card__price">225₽</b>
+          <button class="card__button button" type="button">В корзину</button>
+        </li>
+        <li class="products__item card">
+          <a class="card__link" href="#">
+            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <b class="card__price">225₽</b>
+          <button class="card__button button" type="button">В корзину</button>
+        </li>
+        <li class="products__item card">
+          <a class="card__link" href="#">
+            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <b class="card__price">225₽</b>
+          <button class="card__button button" type="button">В корзину</button>
+        </li>
+        <li class="products__item card">
+          <a class="card__link" href="#">
+            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <b class="card__price">225₽</b>
+          <button class="card__button button" type="button">В корзину</button>
+        </li>
+        <li class="products__item card">
+          <a class="card__link" href="#">
+            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <b class="card__price">225₽</b>
+          <button class="card__button button" type="button">В корзину</button>
+        </li>
+        <li class="products__item card">
+          <a class="card__link" href="#">
+            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <b class="card__price">225₽</b>
+          <button class="card__button button" type="button">В корзину</button>
+        </li>
+      </ul>
+      <div class="products__pagination-wrapper">
+        <button class="products__pagination-button products__pagination-button--back">Назад</button>
+        <ol class="products__pagination-list">
+          <li class="products__pagination-item">
+            <button class="products__pagination-button">1</button>
+          </li>
+          <li class="products__pagination-item">
+            <button class="products__pagination-button">2</button>
+          </li>
+          <li class="products__pagination-item">
+            <button class="products__pagination-button">3</button>
+          </li>
+        </ol>
+        <button class="products__pagination-button products__pagination-button--forward">Вперёд</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts-map">
+    <div class="contacts-map__wrapper"></div>
   </section>
 
 </main>
