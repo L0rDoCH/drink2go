@@ -8,8 +8,9 @@
 <body>
 
 <header class="main-header">
-  <nav class="main-mav">
+  <nav class="main-nav">
     <a class="main-nav__logo" href="#">
+      <svg class="main-nav__logo-image"></svg>
       <p class="main-nav__logo-text">Интернет-магазин кофейных напитков</p>
     </a>
     <div class="main-nav__menu-wrapper menu">
@@ -242,13 +243,15 @@
     </div>
 
     <div class="catalog__sorting-wrapper sorting">
-      <p class="sorting__text">сортировка:</p>
-      <select class="sorting__control" name="catalog-sorting">
-        <option value="default">по умолчанию</option>
-        <option value="expensive">сначала дорогие</option>
-        <option value="cheap">сначала дешёвые</option>
-        <option value="high-rating">высокий рейтинг</option>
-      </select>
+      <label>
+        <span class="sorting__text">сортировка:</span>
+        <select class="sorting__control" name="catalog-sorting">
+          <option value="default">по умолчанию</option>
+          <option value="expensive">сначала дорогие</option>
+          <option value="cheap">сначала дешёвые</option>
+          <option value="high-rating">высокий рейтинг</option>
+        </select>
+      </label>
     </div>
 
     <div class="catalog__products-wrapper products">
@@ -329,8 +332,78 @@
   <section class="contacts-map">
     <div class="contacts-map__wrapper"></div>
   </section>
-
 </main>
+
+<footer class="main-footer">
+  <div class="main-footer__social-wrapper social">
+    <a class="social__logo" href="#">
+      <svg class="social__logo-image"></svg>
+      <p class="social__logo-text">Интернет-магазин кофейных напитков</p>
+    </a>
+    <a class="social__vk" href="#">
+      <svg class="social__vk-image"></svg>
+      <p class="visually-hidden">Мы в контакте</p>
+    </a>
+    <a class="social__pinterest" href="#">
+      <svg class="social__pinterest-image"></svg>
+      <p class="visually-hidden">Мы в pinterest</p>
+    </a>
+    <a class="social__ok" href="#">
+      <svg class="social__ok-image"></svg>
+      <p class="visually-hidden">Мы в одноклассниках</p>
+    </a>
+  </div>
+  <nav class="main-footer__nav main-footer__nav--store footer-nav">
+    <h2 class="main-footer__title">Интернет-магазин</h2>
+    <ul class="footer-nav__list">
+      <li class="footer-nav__item">
+        <a class="footer-nav__link" href="#">Каталог</a>
+      </li>
+      <li class="footer-nav__item">
+        <a class="footer-nav__link" href="#">Доставка</a>
+      </li>
+      <li class="footer-nav__item">
+        <a class="footer-nav__link" href="#">Способы оплаты</a>
+      </li>
+      <li class="footer-nav__item">
+        <a class="footer-nav__link" href="#">О нас</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="main-footer__nav main-footer__nav--media footer-nav">
+    <h2 class="main-footer__title">Медиа</h2>
+    <ul class="footer-nav__list">
+      <li class="footer-nav__item">
+        <a class="footer-nav__link" href="#">Блог</a>
+      </li>
+      <li class="footer-nav__item">
+        <a class="footer-nav__link" href="#">Информация для СМИ</a>
+      </li>
+      <li class="footer-nav__item">
+        <a class="footer-nav__link" href="#">Правовая информация</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="main-footer__contacts-wrapper contacts">
+    <h2 class="main-footer__title">Контакты</h2>
+    <address class="contacts__address">
+      <p class="contacts__text">
+        Санкт-Петербург, набережная реки Карповки, дом 5
+      </p>
+    </address>
+    <address class="contacts__phone">
+      <a class="contacts__text" href="tel:89999999999">
+        +7 (999) 999-99-99
+      </a>
+    </address>
+  </div>
+  <div class="main-footer__academy">
+    <a href="" class="main-footer__academy-link">
+      <p class="main-footer__academy-text">Разработано в HTML Academy</p>
+      <svg class="main-footer__academy-logo"></svg>
+    </a>
+  </div>
+</footer>
 
 </body>
 </html>
