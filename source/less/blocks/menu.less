@@ -45,7 +45,6 @@
 }
 
 .menu__login-menu-item {
-  padding: 20px;
   text-align: center;
 }
 
@@ -59,10 +58,19 @@
   color: @base-black;
   text-align: center;
   letter-spacing: 0.02em;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: @base-secondary;
+  }
 }
 
 .menu__login-menu-link {
   display: block;
+  padding: 20px;
   line-height: 0;
 }
 
@@ -80,6 +88,14 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: @base-secondary;
+  }
 
   &--JS-menu {
     display: block;
