@@ -1,0 +1,71 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  margin: 0 auto;
+  padding: 50px 20px 28px;
+  box-sizing: border-box;
+  background-color: @base-white;
+}
+
+.advantages__item {
+  position: relative;
+  padding-top: 60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background: center no-repeat;
+  }
+
+  &--speed {
+    &::before {
+      background-image: url("/img/icons/advantages-speed.svg");
+    }
+  }
+
+  &--comfort {
+    &::before {
+      background-image: url("/img/icons/advantages-comfort.svg");
+    }
+  }
+
+  &--energy {
+    &::before {
+      background-image: url("/img/icons/advantages-energy.svg");
+    }
+  }
+
+  &--ecology {
+    &::before {
+      background-image: url("/img/icons/advantages-ecology.svg");
+    }
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__item-title {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.advantages__description {
+  margin: 0 0 32px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}

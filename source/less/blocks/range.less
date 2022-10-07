@@ -1,0 +1,131 @@
+.range {
+  position: relative;
+  margin-bottom: 24px;
+  padding-top: 11px;
+}
+
+.range__scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 36px;
+  background-color: @light-grey;
+}
+
+.range__bar {
+  position: absolute;
+  height: 4px;
+  background-color: @primary-lighter;
+
+  &--disabled {
+    background-color: @base-gray;
+  }
+}
+
+.range__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: @base-white;
+  border: 2px solid @primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    &::before {
+      background-color: @primary-opacity;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    &::before {
+      background-color: @primary-opacity;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: @base-primary;
+    }
+  }
+
+  &:disabled {
+    background: @lightest-grey;
+    border-color: @base-gray;
+
+    &::before {
+      background-color: @lightest-grey;
+    }
+  }
+
+  &--min {
+    top: -10px;
+    left: 0;
+  }
+
+  &--max {
+    top: -10px;
+    right: 0;
+  }
+}
+
+.range__inputs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range__inputs-separator {
+  width: 9px;
+  height: 2px;
+  border: 1px solid @base-gray;
+  box-sizing: border-box;
+}
+
+.range__input {
+  padding: 7px 10px;
+  width: 118px;
+  height: 38px;
+  box-sizing: border-box;
+  border: 2px solid @primary-lighter;
+  border-radius: 4px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: @base-black;
+
+  &::placeholder {
+    color: @base-gray;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: @primary-darker;
+  }
+
+  &:disabled {
+    color: @base-gray;
+    background-color: @lightest-grey;
+    border-color: @light-grey;
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}
