@@ -2,3 +2,39 @@
   width: 320px;
   margin: 0 auto;
 }
+
+.main-footer__title {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: @base-primary;
+}
+
+.main-footer__academy {
+  padding: 20px 57px 30px;
+}
+
+.main-footer__academy-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: @base-gray;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: @base-primary;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}
+

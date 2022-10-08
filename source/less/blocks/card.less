@@ -6,6 +6,12 @@
 
   background-color: @base-white;
   border-radius: 4px;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .card__link {
@@ -14,6 +20,10 @@
   align-items: center;
   color: @base-black;
   text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .card__image {

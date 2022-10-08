@@ -1,0 +1,34 @@
+.footer-nav {
+  padding: 20px 20px 8px;
+  border-bottom: 1px solid @base-secondary;
+}
+
+.footer-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav__item {
+  margin-bottom: 20px;
+}
+
+.footer-nav__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: @base-black;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: @primary-lighter;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}
