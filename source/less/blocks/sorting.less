@@ -1,0 +1,32 @@
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.sorting__text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sorting__control {
+  max-width: 176px;
+  min-height: 32px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: @base-primary;
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    background-color: @base-secondary;
+  }
+}

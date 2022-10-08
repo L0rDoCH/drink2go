@@ -11,25 +11,50 @@
   text-align: center;
   color: @base-white;
 
-  &--reset {
-    color: @base-primary;
-    background-color: @base-white;
-  }
-
   &:hover {
+    color: @base-white;
     background-color: @primary-lighter;
   }
 
-  &:focus {
+  &:focus-visible {
     outline: none;
+    color: @base-white;
     background-color: @primary-lighter;
   }
 
   &:active {
+    color: @base-white;
     background-color: @primary-darker;
   }
 
   &:disabled {
+    color: @base-white;
     background-color: @base-gray;
+  }
+
+  &--reset {
+    color: @base-primary;
+    background-color: @base-white;
+
+    &:disabled {
+      background-color: @light-grey;
+    }
+  }
+
+  &--cart {
+    position: relative;
+    padding: 8px 20px 8px 46px;
+    font-size: 14px;
+    line-height: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 16px;
+      top: 10px;
+      left: 20px;
+      background: url("/img/icons/cart.svg") center no-repeat;
+    }
   }
 }

@@ -21,13 +21,13 @@
           d="M5.66091 3.87546L5.89351 6.66667H10.1065L10.3391 3.87546C10.4531 2.50699 9.37321 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546ZM11.4444 6.66667L11.6678 3.98618C11.8466 1.84036 10.1533 0 8 0C5.84674 0 4.15336 1.84036 4.33218 3.98618L4.55556 6.66667H1.34687H0L0.190476 8L1.00626 13.7105C1.19393 15.0242 2.31905 16 3.64612 16H12.3539C13.6809 16 14.8061 15.0242 14.9937 13.7105L15.8095 8L16 6.66667H14.6531H11.4444ZM11.3333 8H11.2801L11.0579 10.6667H14.0817L14.4627 8H11.3333ZM9.94213 8H6.05787L6.28009 10.6667H9.71991L9.94213 8ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM10.9468 12L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219L13.8912 12H10.9468ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324Z"
           fill="currentcolor"/>
   </symbol>
-  <!--  иконка слайдера назад-->
-  <symbol viewBox="0 0 11 20" id="slider-back">
+  <!--  иконка стрелки назад-->
+  <symbol viewBox="0 0 11 20" id="arrow-back">
     <path fill-rule="evenodd" clip-rule="evenodd"
           d="M9.71661 0L11 1.32082L2.56677 10L11 18.6792L9.71661 20L0 10L9.71661 0Z" fill="currentcolor"/>
   </symbol>
-  <!--  иконка слайдера вперед-->
-  <symbol viewBox="0 0 11 20" id="slider-forward">
+  <!--  иконка стрелки вперед-->
+  <symbol viewBox="0 0 11 20" id="arrow-forward">
     <path fill-rule="evenodd" clip-rule="evenodd"
           d="M1.28339 0L0 1.32082L8.43323 10L0 18.6792L1.28339 20L11 10L1.28339 0Z" fill="currentcolor"/>
   </symbol>
@@ -38,7 +38,7 @@
   <nav class="main-nav">
     <div class="main-nav__menu-wrapper menu">
       <a class="main-nav__logo" href="#">
-        <img class="main-nav__logo-image" src="/img/icons/logo-mobile.svg" width="32" height="36"
+        <img class="main-nav__logo-image" src="/img/icons/logo-icon.svg" width="32" height="36"
              alt="Логотип магазина">
         <p class="main-nav__logo-text">Интернет-магазин кофейных напитков</p>
       </a>
@@ -144,13 +144,13 @@
     </ul>
     <button class="slider__toggle slider__toggle--back" type="button">
       <svg width="11" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use href="#slider-back"></use>
+        <use href="#arrow-back"></use>
       </svg>
       <span class="visually-hidden">Назад</span>
     </button>
     <button class="slider__toggle slider__toggle--forward" type="button">
       <svg width="11" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use href="#slider-forward"></use>
+        <use href="#arrow-forward"></use>
       </svg>
       <span class="visually-hidden">Вперед</span>
     </button>
@@ -292,9 +292,10 @@
       </form>
     </div>
 
-    <div class="catalog__sorting-wrapper sorting">
-      <label>
-        <span class="sorting__text">сортировка:</span>
+    <div class="catalog__sorting-wrapper">
+      <label class="sorting">
+        <span class="sorting__text">Сортировка:</span>
+        <!--        Выпадающее меню и иконку для select не стилизуем ввиду различного поведения в разных браузерах-->
         <select class="sorting__control" name="catalog-sorting">
           <option value="default">по умолчанию</option>
           <option value="expensive">сначала дорогие</option>
@@ -308,79 +309,108 @@
       <ul class="products__list">
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <img class="card__image" src="/img/catalog/catalog-image-1.png" alt="Напиток Декаф Флэт Уайт" width="130"
+                 height="188">
             <h3 class="card__title">Декаф Флэт Уайт</h3>
           </a>
-          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <b class="card__price">225₽</b>
-          <button class="card__button button" type="button">В корзину</button>
+          <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <div class="card__price-wrapper">
+            <b class="card__price">225₽</b>
+            <button class="card__button button button--cart" type="button">В корзину</button>
+          </div>
         </li>
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <img class="card__image" src="/img/catalog/catalog-image-2.png" alt="Напиток Декаф Флэт Уайт" width="130"
+                 height="188">
             <h3 class="card__title">Декаф Флэт Уайт</h3>
           </a>
-          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <b class="card__price">225₽</b>
-          <button class="card__button button" type="button">В корзину</button>
+          <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <div class="card__price-wrapper">
+            <b class="card__price">225₽</b>
+            <button class="card__button button button--cart" type="button">В корзину</button>
+          </div>
         </li>
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <img class="card__image" src="/img/catalog/catalog-image-3.png" alt="Напиток Декаф Флэт Уайт" width="130"
+                 height="188">
             <h3 class="card__title">Декаф Флэт Уайт</h3>
           </a>
-          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <b class="card__price">225₽</b>
-          <button class="card__button button" type="button">В корзину</button>
+          <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <div class="card__price-wrapper">
+            <b class="card__price">225₽</b>
+            <button class="card__button button button--cart" type="button">В корзину</button>
+          </div>
         </li>
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <img class="card__image" src="/img/catalog/catalog-image-4.png" alt="Напиток Декаф Флэт Уайт" width="130"
+                 height="188">
             <h3 class="card__title">Декаф Флэт Уайт</h3>
           </a>
-          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <b class="card__price">225₽</b>
-          <button class="card__button button" type="button">В корзину</button>
+          <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <div class="card__price-wrapper">
+            <b class="card__price">225₽</b>
+            <button class="card__button button button--cart" type="button">В корзину</button>
+          </div>
         </li>
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <img class="card__image" src="/img/catalog/catalog-image-5.png" alt="Напиток Декаф Флэт Уайт" width="130"
+                 height="188">
             <h3 class="card__title">Декаф Флэт Уайт</h3>
           </a>
-          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <b class="card__price">225₽</b>
-          <button class="card__button button" type="button">В корзину</button>
+          <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <div class="card__price-wrapper">
+            <b class="card__price">225₽</b>
+            <button class="card__button button button--cart" type="button">В корзину</button>
+          </div>
         </li>
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="#" alt="Напиток Декаф Флэт Уайт">
+            <img class="card__image" src="/img/catalog/catalog-image-6.png" alt="Напиток Декаф Флэт Уайт" width="130"
+                 height="188">
             <h3 class="card__title">Декаф Флэт Уайт</h3>
           </a>
-          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <b class="card__price">225₽</b>
-          <button class="card__button button" type="button">В корзину</button>
+          <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <div class="card__price-wrapper">
+            <b class="card__price">225₽</b>
+            <button class="card__button button button--cart" type="button">В корзину</button>
+          </div>
         </li>
       </ul>
       <div class="products__pagination-wrapper">
-        <button class="products__pagination-button products__pagination-button--back">Назад</button>
+        <button class="products__pagination-button products__pagination-button--back">
+          <svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use href="#arrow-back"></use>
+          </svg>
+          <span class="products__pagination-button-text">Назад</span>
+        </button>
         <ol class="products__pagination-list">
           <li class="products__pagination-item">
             <button class="products__pagination-button">1</button>
           </li>
           <li class="products__pagination-item">
-            <button class="products__pagination-button">2</button>
+            <button class="products__pagination-button products__pagination-button--active">2</button>
           </li>
           <li class="products__pagination-item">
             <button class="products__pagination-button">3</button>
           </li>
         </ol>
-        <button class="products__pagination-button products__pagination-button--forward">Вперёд</button>
+        <button class="products__pagination-button products__pagination-button--forward">
+          <svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use href="#arrow-forward"></use>
+          </svg>
+          <span class="products__pagination-button-text">Вперёд</span>
+        </button>
       </div>
     </div>
   </section>
 
   <section class="contacts-map">
-    <div class="contacts-map__wrapper"></div>
+    <div class="contacts-map__wrapper">
+    </div>
   </section>
 </main>
 
