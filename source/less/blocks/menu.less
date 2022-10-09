@@ -45,12 +45,23 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .menu__login-menu-list {
   display: flex;
   flex-wrap: wrap;
   min-width: 120px;
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-end;
+    min-width: 300px;
+  }
 }
 
 .menu__main-menu-item {
@@ -95,7 +106,7 @@
     }
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       color: @base-primary;
     }
   }
@@ -121,11 +132,22 @@
   @media (min-width: @tablet-width) {
     padding: 30px 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .menu__login-menu-text {
   display: none;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-left: 8px;
+    line-height: 16px;
+  }
 }
 
 .menu__toggle {

@@ -9,6 +9,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
 
 .filter__group-title {
@@ -30,6 +34,10 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 26px 20px 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 30px;
   }
 }
 
@@ -204,6 +212,13 @@
     grid-column: 1 / -1;
     margin-bottom: 24px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 0;
+  }
 }
 
 .filter__button {
@@ -216,5 +231,11 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 15px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 150px;
+    margin: 0;
+    padding: 8px 4px;
   }
 }

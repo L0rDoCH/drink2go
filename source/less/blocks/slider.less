@@ -19,11 +19,15 @@
   border: none;
   color: @base-primary;
 
+  @media (min-width: @tablet-width) {
+    width: 80px;
+  }
+
   &--back {
     left: 0;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       outline: none;
       background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
     }
@@ -37,7 +41,7 @@
     right: 0;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       outline: none;
       background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
     }
@@ -50,5 +54,37 @@
   &:disabled {
     color: @base-gray;
     background: transparent;
+  }
+}
+
+.slider__pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider__pagination-item {
+  margin-left: 8px;
+  line-height: 0;
+
+  &--active {
+    .slider__pagination-button {
+      background-color: @base-primary;
+    }
+  }
+}
+
+.slider__pagination-button {
+  width: 62px;
+  height: 4px;
+  box-sizing: border-box;
+  background-color: @base-white;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background-color: @primary-opacity;
   }
 }

@@ -9,6 +9,10 @@
     gap: 30px;
     padding-bottom: 70px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .products__pagination-wrapper {
@@ -19,6 +23,11 @@
     justify-content: flex-end;
     width: calc(100% + 40px);
     margin-left: -20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: calc(100% + 20px);
+    margin-left: 0;
   }
 }
 

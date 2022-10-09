@@ -9,12 +9,24 @@
     border: none;
     margin-top: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .social__logo {
   display: block;
   margin: 10px 37px 10px 0;
   line-height: 0;
+  text-decoration: none;
+  color: @base-black;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 40px;
+  }
 
   &:focus {
     outline: none;
@@ -25,10 +37,21 @@
   @media (min-width: @tablet-width) {
     width: 170px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .social__logo-text {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .social__wrapper {
@@ -40,6 +63,10 @@
 
   @media (min-width: @tablet-width) {
     justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
   }
 }
 

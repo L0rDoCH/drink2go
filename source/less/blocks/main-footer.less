@@ -5,14 +5,28 @@
   @media (min-width: @tablet-width) {
     width: @tablet-width;
   }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px 30px;
+    width: @desktop-width;
+    box-sizing: border-box;
+    padding: 40px 40px;
+  }
 }
 
 .main-footer__nav-wrapper {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 223px 222px 223px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 5;
+    padding: 0;
   }
 }
 
@@ -30,6 +44,11 @@
 
   @media (min-width: @tablet-width) {
     padding: 20px 281px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 577px;
+    grid-column: 1 / 5;
   }
 }
 
