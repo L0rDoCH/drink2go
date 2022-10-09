@@ -63,14 +63,18 @@
   <nav class="main-nav">
     <div class="main-nav__menu-wrapper menu">
       <a class="main-nav__logo" href="#">
-        <img class="main-nav__logo-image" src="/img/icons/logo-icon.svg" width="32" height="36"
-             alt="Логотип магазина">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" srcset="/img/icons/logo-long.svg">
+          <source media="(min-width: 768px)" type="image/svg+xml" srcset="/img/icons/logo-short.svg">
+          <img class="main-nav__logo-image" src="/img/icons/logo-icon.svg" width="32" height="36"
+               alt="Логотип магазина">
+        </picture>
         <p class="main-nav__logo-text">Интернет-магазин кофейных напитков</p>
       </a>
       <div class="menu__main-menu-wrapper">
         <ul class="menu__main-menu-list">
           <li class="menu__main-menu-item">
-            <a class="menu__main-menu-link" href="#">Главная</a>
+            <a class="menu__main-menu-link menu__main-menu-link--current" href="#">Главная</a>
           </li>
           <li class="menu__main-menu-item">
             <a class="menu__main-menu-link" href="#">Каталог</a>
@@ -119,8 +123,13 @@
     <h2 class="visually-hidden">Новинки</h2>
     <ul class="new__list slider__list">
       <li class="new__item new__item--flat slider__item slider__item--active">
-        <img class="new__image" src="/img/slider/flat-mobile.png" alt="Напиток Декаф Флэт Уайт" width="280"
-             height="280">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/png" srcset="/img/slider/flat-desktop.png">
+          <source media="(min-width: 768px)" type="image/png" srcset="/img/slider/flat-tablet.png">
+          <img class="new__image" src="/img/slider/flat-mobile.png" alt="Напиток Декаф Флэт Уайт" width="280"
+               height="280">
+        </picture>
+
         <p class="new__label">Новинка!</p>
         <h3 class="new__title">Декаф Флэт Уайт</h3>
         <p class="new__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
@@ -132,7 +141,12 @@
         </div>
       </li>
       <li class="new__item new__item--latte slider__item">
-        <img class="new__image" src="/img/slider/latte-mobile.png" alt="Напиток Лавандовый Латте">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/png" srcset="/img/slider/latte-desktop.png">
+          <source media="(min-width: 768px)" type="image/png" srcset="/img/slider/latte-tablet.png">
+          <img class="new__image" src="/img/slider/latte-mobile.png" alt="Напиток Лавандовый Латте" width="280"
+               height="280">
+        </picture>
         <p class="new__label">Новинка!</p>
         <h3 class="new__title">Лавандовый Латте</h3>
         <p class="new__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым
@@ -144,7 +158,12 @@
         </div>
       </li>
       <li class="new__item new__item--espresso slider__item">
-        <img class="new__image" src="/img/slider/espresso-mobile.png" alt="Напиток Тройной Эспрессо">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/png" srcset="/img/slider/espresso-desktop.png">
+          <source media="(min-width: 768px)" type="image/png" srcset="/img/slider/espresso-tablet.png">
+          <img class="new__image" src="/img/slider/espresso-mobile.png" alt="Напиток Тройной Эспрессо" width="280"
+               height="280">
+        </picture>
         <p class="new__label">Новинка!</p>
         <h3 class="new__title">Тройной Эспрессо</h3>
         <p class="new__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии
@@ -213,7 +232,7 @@
           <legend class="filter__group-title">Цена</legend>
           <div class="filter__range range">
             <div class="range__scale">
-              <div class="range__bar" style="left: 0px; width: 260px">
+              <div class="range__bar" style="left: 0px; width: 210px">
                 <!--Стиль для изменения длины слайдера-->
                 <!--При отключении добавить модификатор range__bar--disabled-->
                 <button class="range__toggle range__toggle--min" type="button">
@@ -442,8 +461,11 @@
 <footer class="main-footer">
   <div class="main-footer__social-wrapper social">
     <a class="social__logo" href="#">
-      <img class="social__logo-image" src="/img/icons/logo-short.svg" width="82" height="36"
-           alt="Логотип магазина">
+      <picture>
+        <source media="(min-width: 768px)" type="image/svg+xml" srcset="/img/icons/logo-long.svg">
+        <img class="social__logo-image" src="/img/icons/logo-short.svg" width="82" height="36"
+             alt="Логотип магазина">
+      </picture>
       <p class="social__logo-text">Интернет-магазин кофейных напитков</p>
     </a>
     <div class="social__wrapper">
@@ -467,49 +489,51 @@
       </a>
     </div>
   </div>
-  <nav class="main-footer__nav main-footer__nav--store footer-nav">
-    <h2 class="main-footer__title">Интернет-магазин</h2>
-    <ul class="footer-nav__list">
-      <li class="footer-nav__item">
-        <a class="footer-nav__link" href="#">Каталог</a>
-      </li>
-      <li class="footer-nav__item">
-        <a class="footer-nav__link" href="#">Доставка</a>
-      </li>
-      <li class="footer-nav__item">
-        <a class="footer-nav__link" href="#">Способы оплаты</a>
-      </li>
-      <li class="footer-nav__item">
-        <a class="footer-nav__link" href="#">О нас</a>
-      </li>
-    </ul>
-  </nav>
-  <nav class="main-footer__nav main-footer__nav--media footer-nav">
-    <h2 class="main-footer__title">Медиа</h2>
-    <ul class="footer-nav__list">
-      <li class="footer-nav__item">
-        <a class="footer-nav__link" href="#">Блог</a>
-      </li>
-      <li class="footer-nav__item">
-        <a class="footer-nav__link" href="#">Информация для СМИ</a>
-      </li>
-      <li class="footer-nav__item">
-        <a class="footer-nav__link" href="#">Правовая информация</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="main-footer__contacts-wrapper contacts">
-    <h2 class="main-footer__title">Контакты</h2>
-    <address class="contacts__address contacts__address--address">
-      <p class="contacts__text">
-        Санкт-Петербург, набережная реки Карповки, дом 5
-      </p>
-    </address>
-    <address class="contacts__address contacts__address--phone">
-      <a class="contacts__text contacts__text--link" href="tel:+79999999999">
-        +7 (999) 999-99-99
-      </a>
-    </address>
+  <div class="main-footer__nav-wrapper">
+    <nav class="main-footer__nav main-footer__nav--store footer-nav">
+      <h2 class="main-footer__title">Интернет-магазин</h2>
+      <ul class="footer-nav__list">
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Каталог</a>
+        </li>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Доставка</a>
+        </li>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Способы оплаты</a>
+        </li>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">О нас</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="main-footer__nav main-footer__nav--media footer-nav">
+      <h2 class="main-footer__title">Медиа</h2>
+      <ul class="footer-nav__list">
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Блог</a>
+        </li>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Информация для СМИ</a>
+        </li>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Правовая информация</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="main-footer__contacts-wrapper contacts">
+      <h2 class="main-footer__title">Контакты</h2>
+      <address class="contacts__address contacts__address--address">
+        <p class="contacts__text">
+          Санкт-Петербург, набережная реки Карповки, дом 5
+        </p>
+      </address>
+      <address class="contacts__address contacts__address--phone">
+        <a class="contacts__text contacts__text--link" href="tel:+79999999999">
+          +7 (999) 999-99-99
+        </a>
+      </address>
+    </div>
   </div>
   <div class="main-footer__academy">
     <a href="" class="main-footer__academy-link">

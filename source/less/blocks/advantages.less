@@ -2,12 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
   padding: 50px 20px 28px;
   box-sizing: border-box;
   background-color: @base-white;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 0 20px 100px;
+  }
 }
+
 
 .advantages__item {
   position: relative;
@@ -46,12 +52,28 @@
       background-image: url("/img/icons/advantages-ecology.svg");
     }
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 82px;
+
+    &::before {
+      width: 50px;
+      top: 4px;
+      left: 11px;
+    }
+  }
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+  }
 }
 
 .advantages__item-title {
@@ -60,6 +82,13 @@
   font-size: 18px;
   line-height: 32px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: left;
+  }
 }
 
 .advantages__description {
@@ -68,4 +97,11 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
 }

@@ -1,6 +1,19 @@
 .main-footer {
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+}
+
+.main-footer__nav-wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 223px 222px 223px;
+    gap: 30px;
+    padding: 0 20px;
+  }
 }
 
 .main-footer__title {
@@ -14,6 +27,10 @@
 
 .main-footer__academy {
   padding: 20px 57px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 281px 30px;
+  }
 }
 
 .main-footer__academy-link {

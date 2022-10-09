@@ -4,6 +4,11 @@
   margin-top: 10px;
   padding: 2px 20px 12px;
   border-bottom: 1px solid @base-secondary;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    margin-top: 20px;
+  }
 }
 
 .social__logo {
@@ -13,6 +18,12 @@
 
   &:focus {
     outline: none;
+  }
+}
+
+.social__logo-image {
+  @media (min-width: @tablet-width) {
+    width: 170px;
   }
 }
 
@@ -26,6 +37,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
 }
 
 .social__link {
@@ -35,6 +50,10 @@
   padding: 10px;
   color: @base-gray;
   border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin: 10px;
+  }
 
   &:hover,
   &:focus {

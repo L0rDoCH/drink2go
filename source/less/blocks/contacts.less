@@ -1,10 +1,18 @@
 .contacts {
   padding: 20px;
   border-bottom: 1px solid @base-secondary;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .contacts__address {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    line-height: 0;
+  }
 
   &--address {
     margin-bottom: 16px;

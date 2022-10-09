@@ -2,15 +2,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
   padding: 50px 20px 24px;
   box-sizing: border-box;
   background-color: @lightest-grey;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 80px 20px 90px;
+  }
 }
 
 .catalog__secondary-title {
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .catalog__filter-wrapper {
@@ -20,4 +29,10 @@
 .catalog__sorting-wrapper {
   width: 100%;
   margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin-bottom: 30px;
+    padding-left: 446px;
+  }
 }
