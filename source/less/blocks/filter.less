@@ -16,7 +16,7 @@
 }
 
 .filter__group-title {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
   padding: 0;
   font-weight: 600;
   font-size: 16px;
@@ -29,7 +29,7 @@
 
 .filter__list {
   margin: 0;
-  padding: 0 0 12px;
+  padding: 0 0 3px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -37,12 +37,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 0 30px;
+    padding: 0 0 10px;
   }
 }
 
 .filter__item {
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
@@ -204,20 +204,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 12px;
+  padding-top: 7px;
 
   @media (min-width: @tablet-width) {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     grid-column: 1 / -1;
-    margin-bottom: 24px;
+    margin-bottom: 29px;
+    padding: 0 56px 0 0;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
-    margin-bottom: 0;
+    margin: 8px 0 0;
+    padding: 0;
   }
 }
 
@@ -227,10 +231,12 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 15px 20px;
+    width: auto;
+    margin: 0 15px 12px;
+    padding: 7px 9px;
   }
 
   @media (min-width: @desktop-width) {
