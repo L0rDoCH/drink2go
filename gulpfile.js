@@ -70,7 +70,7 @@ const webpConvert = () => {
 // SVG
 
 const optimizeSvg = () => {
-  return gulp.src('source/img/*.svg')
+  return gulp.src('source/img/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'))
 }
@@ -80,6 +80,7 @@ const optimizeSvg = () => {
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
+    'source/leaflet/**/*.*',
     'source/*.ico',
     'source/*.webmanifest',
   ], {

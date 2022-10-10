@@ -4,7 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drink2Go</title>
+  <link rel="preload" href="/css/style.min.css" as="style" crossorigin="anonymous">
+  <link rel="preload" href="/leaflet/leaflet.css" as="style" crossorigin="anonymous">
+  <link rel="preload" href="/js/mobile-menu.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="/leaflet/leaflet.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="/js/map.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/montserratbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/montserratmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/montserratregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/montserratsemibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/leaflet/leaflet.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml"> <!--svg-->
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
 
@@ -124,9 +138,18 @@
     <ul class="new__list slider__list">
       <li class="new__item new__item--flat slider__item slider__item--active">
         <picture>
-          <source media="(min-width: 1440px)" type="image/png" srcset="/img/slider/flat-desktop.png">
-          <source media="(min-width: 768px)" type="image/png" srcset="/img/slider/flat-tablet.png">
-          <img class="new__image" src="/img/slider/flat-mobile.png" alt="Напиток Декаф Флэт Уайт" width="280"
+          <source media="(min-width: 1440px)" type="image/webp"
+                  srcset="/img/slider/flat-desktop.webp 1x, /img/slider/flat-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp"
+                  srcset="/img/slider/flat-tablet.webp 1x, /img/slider/flat-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="/img/slider/flat-mobile.webp 1x, /img/slider/flat-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" type="image/png"
+                  srcset="/img/slider/flat-desktop.png 1x, /img/slider/flat-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" type="image/png"
+                  srcset="/img/slider/flat-tablet.png 1x, /img/slider/flat-tablet@2x.png 2x">
+          <img class="new__image" src="/img/slider/flat-mobile.png" srcset="/img/slider/flat-mobile@2x.png 2x"
+               loading="lazy"
+               alt="Напиток Декаф Флэт Уайт" width="280"
                height="280">
         </picture>
         <div class="new__wrapper">
@@ -144,9 +167,17 @@
       </li>
       <li class="new__item new__item--latte slider__item">
         <picture>
-          <source media="(min-width: 1440px)" type="image/png" srcset="/img/slider/latte-desktop.png">
-          <source media="(min-width: 768px)" type="image/png" srcset="/img/slider/latte-tablet.png">
-          <img class="new__image" src="/img/slider/latte-mobile.png" alt="Напиток Лавандовый Латте" width="280"
+          <source media="(min-width: 1440px)" type="image/webp"
+                  srcset="/img/slider/latte-desktop.webp 1x, /img/slider/latte-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp"
+                  srcset="/img/slider/latte-tablet.webp 1x, /img/slider/latte-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="/img/slider/latte-mobile.webp 1x, /img/slider/latte-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" type="image/png"
+                  srcset="/img/slider/latte-desktop.png 1x, /img/slider/latte-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" type="image/png"
+                  srcset="/img/slider/latte-tablet.png 1x, /img/slider/latte-tablet@2x.png 2x">
+          <img class="new__image" src="/img/slider/latte-mobile.png" srcset="/img/slider/latte-mobile@2x.png 2x"
+               loading="lazy" alt="Напиток Лавандовый Латте" width="280"
                height="280">
         </picture>
         <div class="new__wrapper">
@@ -163,9 +194,18 @@
       </li>
       <li class="new__item new__item--espresso slider__item">
         <picture>
-          <source media="(min-width: 1440px)" type="image/png" srcset="/img/slider/espresso-desktop.png">
-          <source media="(min-width: 768px)" type="image/png" srcset="/img/slider/espresso-tablet.png">
-          <img class="new__image" src="/img/slider/espresso-mobile.png" alt="Напиток Тройной Эспрессо" width="280"
+          <source media="(min-width: 1440px)" type="image/webp"
+                  srcset="/img/slider/espresso-desktop.webp 1x, /img/slider/espresso-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp"
+                  srcset="/img/slider/espresso-tablet.webp 1x, /img/slider/espresso-tablet@2x.webp 2x">
+          <source type="image/webp"
+                  srcset="/img/slider/espresso-mobile.webp 1x, /img/slider/espresso-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" type="image/png"
+                  srcset="/img/slider/espresso-desktop.png 1x, /img/slider/espresso-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" type="image/png"
+                  srcset="/img/slider/espresso-tablet.png 1x, /img/slider/espresso-tablet@2x.png 2x">
+          <img class="new__image" src="/img/slider/espresso-mobile.png" srcset="/img/slider/espresso-mobile@2x.png 2x"
+               loading="lazy" alt="Напиток Тройной Эспрессо" width="280"
                height="280">
         </picture>
         <div class="new__wrapper">
@@ -360,8 +400,14 @@
       <ul class="products__list">
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="/img/catalog/catalog-image-1.png" alt="Напиток Декаф Флэт Уайт" width="130"
-                 height="188">
+            <picture>
+              <source type="image/webp"
+                      srcset="/img/catalog/catalog-image-1.webp 1x, /img/catalog/catalog-image-1@2x.webp 2x">
+              <img class="card__image" src="/img/catalog/catalog-image-1.png"
+                   srcset="/img/catalog/catalog-image-1@2x.png 2x"
+                   loading="lazy" alt="Напиток Декаф Флэт Уайт" width="130"
+                   height="188">
+            </picture>
             <h4 class="card__title">Декаф Флэт Уайт</h4>
           </a>
           <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -372,8 +418,14 @@
         </li>
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="/img/catalog/catalog-image-2.png" alt="Напиток Декаф Флэт Уайт" width="130"
-                 height="188">
+            <picture>
+              <source type="image/webp"
+                      srcset="/img/catalog/catalog-image-2.webp 1x, /img/catalog/catalog-image-2@2x.webp 2x">
+              <img class="card__image" src="/img/catalog/catalog-image-2.png"
+                   srcset="/img/catalog/catalog-image-2@2x.png 2x"
+                   loading="lazy" alt="Напиток Декаф Флэт Уайт" width="130"
+                   height="188">
+            </picture>
             <h4 class="card__title">Декаф Флэт Уайт</h4>
           </a>
           <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -384,8 +436,14 @@
         </li>
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="/img/catalog/catalog-image-3.png" alt="Напиток Декаф Флэт Уайт" width="130"
-                 height="188">
+            <picture>
+              <source type="image/webp"
+                      srcset="/img/catalog/catalog-image-3.webp 1x, /img/catalog/catalog-image-3@2x.webp 2x">
+              <img class="card__image" src="/img/catalog/catalog-image-3.png"
+                   srcset="/img/catalog/catalog-image-3@2x.png 2x"
+                   loading="lazy" alt="Напиток Декаф Флэт Уайт" width="130"
+                   height="188">
+            </picture>
             <h4 class="card__title">Декаф Флэт Уайт</h4>
           </a>
           <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -396,8 +454,14 @@
         </li>
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="/img/catalog/catalog-image-4.png" alt="Напиток Декаф Флэт Уайт" width="130"
-                 height="188">
+            <picture>
+              <source type="image/webp"
+                      srcset="/img/catalog/catalog-image-4.webp 1x, /img/catalog/catalog-image-4@2x.webp 2x">
+              <img class="card__image" src="/img/catalog/catalog-image-4.png"
+                   srcset="/img/catalog/catalog-image-4@2x.png 2x"
+                   loading="lazy" alt="Напиток Декаф Флэт Уайт" width="130"
+                   height="188">
+            </picture>
             <h4 class="card__title">Декаф Флэт Уайт</h4>
           </a>
           <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -408,8 +472,14 @@
         </li>
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="/img/catalog/catalog-image-5.png" alt="Напиток Декаф Флэт Уайт" width="130"
-                 height="188">
+            <picture>
+              <source type="image/webp"
+                      srcset="/img/catalog/catalog-image-5.webp 1x, /img/catalog/catalog-image-5@2x.webp 2x">
+              <img class="card__image" src="/img/catalog/catalog-image-5.png"
+                   srcset="/img/catalog/catalog-image-5@2x.png 2x"
+                   loading="lazy" alt="Напиток Декаф Флэт Уайт" width="130"
+                   height="188">
+            </picture>
             <h4 class="card__title">Декаф Флэт Уайт</h4>
           </a>
           <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -420,8 +490,14 @@
         </li>
         <li class="products__item card">
           <a class="card__link" href="#">
-            <img class="card__image" src="/img/catalog/catalog-image-6.png" alt="Напиток Декаф Флэт Уайт" width="130"
-                 height="188">
+            <picture>
+              <source type="image/webp"
+                      srcset="/img/catalog/catalog-image-6.webp 1x, /img/catalog/catalog-image-6@2x.webp 2x">
+              <img class="card__image" src="/img/catalog/catalog-image-6.png"
+                   srcset="/img/catalog/catalog-image-6@2x.png 2x"
+                   loading="lazy" alt="Напиток Декаф Флэт Уайт" width="130"
+                   height="188">
+            </picture>
             <h4 class="card__title">Декаф Флэт Уайт</h4>
           </a>
           <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -461,7 +537,7 @@
 
   <section class="contacts-map">
     <h2 class="visually-hidden">Как нас найти</h2>
-    <div class="contacts-map__wrapper">
+    <div class="contacts-map__wrapper" id="map">
     </div>
   </section>
 </main>
@@ -552,6 +628,9 @@
     </a>
   </div>
 </footer>
+
+<script src="/leaflet/leaflet.js"></script>
+<script src="/js/map.js"></script>
 
 </body>
 </html>
