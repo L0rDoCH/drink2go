@@ -47,8 +47,5 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module",
-  "dependencies": {
-    "swiper": "^8.4.3"
-  }
+  "type": "module"
 }
