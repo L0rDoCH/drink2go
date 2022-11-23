@@ -1,3 +1,5 @@
+## [Ссылка на сборку](/source/index.html)
+
 # Проект для грейдирования «Drink2Go»
 
 * Студент: [Валентин Хибенков](https://up.htmlacademy.ru/adaptive/25/user/1970787).
